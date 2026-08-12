@@ -15,6 +15,9 @@ export default defineConfig({
   vite: {
     base: isGithubPages ? "/almas-jewellers/" : "/",
   },
+  // GitHub Pages is static hosting: skip the Nitro server bundle entirely so
+  // TanStack Start emits its own prerender-capable server output.
+  ...(isGithubPages ? { nitro: false as const } : {}),
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
