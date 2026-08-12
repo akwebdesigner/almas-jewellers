@@ -26,7 +26,6 @@ export default defineConfig({
       ? {
           // Emit static HTML for every route so GitHub Pages can serve it without a server.
           prerender: { enabled: true, crawlLinks: true },
-          spa: { enabled: true },
         }
       : {}),
   },
