@@ -1,8 +1,5 @@
 import { Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react";
-import logoAsset from "../assets/logo.png.asset.json";
-
-const base = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
-const logoUrl = base ? `${base}${logoAsset.url}` : logoAsset.url;
+import { logoDataUrl as logoUrl } from "../assets/logo-data-url";
 
 const SHOP = [
   { label: "Rings", href: "#collections" },
