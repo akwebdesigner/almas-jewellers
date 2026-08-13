@@ -10,10 +10,7 @@ import {
 
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
-import logoAsset from "../assets/logo.png.asset.json";
-
-const base = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
-const logoUrl = base ? `${base}${logoAsset.url}` : logoAsset.url;
+import { logoDataUrl as logoUrl } from "../assets/logo-data-url";
 
 import catRings from "../assets/cat-rings.jpg";
 import catNecklaces from "../assets/cat-necklaces.jpg";
