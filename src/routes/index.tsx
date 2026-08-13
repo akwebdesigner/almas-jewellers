@@ -12,6 +12,9 @@ import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
 import logoAsset from "../assets/logo.png.asset.json";
 
+const base = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
+const logoUrl = base ? `${base}${logoAsset.url}` : logoAsset.url;
+
 import catRings from "../assets/cat-rings.jpg";
 import catNecklaces from "../assets/cat-necklaces.jpg";
 import catEarrings from "../assets/cat-earrings.jpg";
@@ -438,7 +441,7 @@ function ContactCTA() {
             </p>
             <div className="mt-8 flex items-center gap-4">
               <img
-                src={logoAsset.url}
+                src={logoUrl}
                 alt="Almas Jewellers logo"
                 width={56}
                 height={56}

@@ -1,6 +1,9 @@
 import { Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react";
 import logoAsset from "../assets/logo.png.asset.json";
 
+const base = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
+const logoUrl = base ? `${base}${logoAsset.url}` : logoAsset.url;
+
 const SHOP = [
   { label: "Rings", href: "#collections" },
   { label: "Necklaces", href: "#collections" },
@@ -29,7 +32,7 @@ export function SiteFooter() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3">
               <img
-                src={logoAsset.url}
+                src={logoUrl}
                 alt="Almas Jewellers logo"
                 width={48}
                 height={48}

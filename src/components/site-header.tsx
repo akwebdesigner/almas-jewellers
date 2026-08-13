@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { Menu, X, Search, ShoppingBag } from "lucide-react";
 import logoAsset from "../assets/logo.png.asset.json";
 
+const base = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
+const logoUrl = base ? `${base}${logoAsset.url}` : logoAsset.url;
+
 const NAV = [
   { label: "Home", href: "#home" },
   { label: "Collections", href: "#collections" },
@@ -62,7 +65,7 @@ export function SiteHeader() {
             className="flex items-center gap-3 transition-opacity hover:opacity-80"
           >
             <img
-              src={logoAsset.url}
+              src={logoUrl}
               alt="Almas Jewellers logo"
               width={44}
               height={44}
