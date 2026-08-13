@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Search, ShoppingBag } from "lucide-react";
-import logoAsset from "../assets/logo.png.asset.json";
-
-const base = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
-const logoUrl = base ? `${base}${logoAsset.url}` : logoAsset.url;
+import { logoDataUrl as logoUrl } from "../assets/logo-data-url";
 
 const NAV = [
   { label: "Home", href: "#home" },
